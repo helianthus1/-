@@ -53,6 +53,7 @@ class Solution:
                 d[i + 1][j + 1] += d[i + 1][j] + d[i][j + 1] - d[i][j]
                 if v == 0 and d[i + 1][j + 1] == 0:
                     return False
+        return True
 ```
 ## 时间和空间复杂度分析
 
