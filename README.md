@@ -1,14 +1,14 @@
-# 从一维差分到二维差分
+# [从一维差分到二维差分](https://leetcode.cn/problems/stamping-the-grid/solutions/1199642/wu-nao-zuo-fa-er-wei-qian-zhui-he-er-wei-zwiu/?envType=daily-question&envId=2023-12-14)
 
 ## 前置知识
 
 ### 差分数组
 
-关于一维差分，请参考【算法小课堂】差分数组。
+关于一维差分，请参考 [【算法小课堂】差分数组](https://leetcode.cn/problems/stamping-the-grid/solutions/1199642/wu-nao-zuo-fa-er-wei-qian-zhui-he-er-wei-zwiu/?envType=daily-question&envId=2023-12-14)。
 
 ### 二维前缀和
 
-请参考【图解】二维前缀和。
+请参考[【图解】二维前缀和](https://leetcode.cn/circle/discuss/UUuRex/)。
 
 ## 思路
 
@@ -54,9 +54,22 @@ class Solution:
                 if v == 0 and d[i + 1][j + 1] == 0:
                     return False
 ```
-## 复杂度分析
-  时间复杂度：O(mn)\mathcal{O}(mn)O(mn)，其中 mmm 和 nnn 分别为 grid\textit{grid}grid 的行数和列数。
-  空间复杂度：O(mn)\mathcal{O}(mn)O(mn)。
+## 时间和空间复杂度分析
+
+本部分对上述算法的时间和空间复杂度进行了详细分析。
+
+### 时间复杂度
+
+- **时间复杂度**：O(mn)
+  - 其中 `m` 和 `n` 分别代表 `grid` 的行数和列数。
+  - 主要时间消耗在于遍历 `grid` 以及计算二维前缀和和二维差分。
+
+### 空间复杂度
+
+- **空间复杂度**：O(mn)
+  - 这主要是因为额外使用了大小为 `m+1` x `n+1` 的二维数组 `s` 用于存储前缀和，以及大小为 `m+2` x `n+2` 的二维数组 `d` 用于差分操作。
+  - 这些额外的空间用于辅助快速计算区域和和实现差分操作。
+
 
 
   
